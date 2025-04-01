@@ -39,9 +39,31 @@ Your resume is selected based on the latest Resume V X.XX.pdf in the project fol
 
 .env and job_applications.xlsx are hidden from GitHub for your privacy.
 
+---
+🚀 How to Run
+Clone the repository:
+git clone https://github.com/shannyb8255/ApplyBot.git
+cd ApplyBot
+
+Install the required Python packages:
+pip install -r requirements.txt
+
+Create a .env file in the root folder with the following:
+EMAIL_ADDRESS=youremail@gmail.com
+EMAIL_PASSWORD=your-app-password
+SERPAPI_KEY=your-serpapi-key
+
+Download or prepare your latest resume as a PDF Save it in the main folder with a name like:
+Resume V 1.15.pdf
+
+Run the app:
+python apply_ui.py
+
+---
 🧠 Inspiration
 This project was created to streamline my own job search. I wanted to save time, stay organized, and personalize every application — with minimal manual effort.
 
+---
 📫 Contact
 Have questions or want to collaborate?
 Reach out to me at: shannonebreault@gmail.com
