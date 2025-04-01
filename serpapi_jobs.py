@@ -1,7 +1,13 @@
 from serpapi import GoogleSearch
 import pandas as pd
+import os
+from dotenv import load_dotenv
 
-API_KEY = "acf587ec10b7f1babbe69b0b38c90cd657f293a315b758c1a165c2dd6103bfb8"
+# Load environment variables from .env
+load_dotenv()
+
+# Get API key securely
+API_KEY = os.getenv("SERPAPI_KEY")
 
 def search_jobs(query, location, num_results=20):
     params = {
@@ -33,44 +39,24 @@ def search_jobs(query, location, num_results=20):
 
 if __name__ == "__main__":
     job_titles = [
-    "data scientist",
-    "data analyst",
-    "machine learning engineer",
-    "quantitative analyst",
-    "actuary",
-    "financial analyst",
-    "investment analyst",
-    "risk analyst",
-    "accountant",
-    "financial advisor",
-    "software engineer",
-    "data engineer",
-    "business intelligence analyst",
-    "statistical analyst",
-    "operations research analyst",
-    "economist",
-    "machine learning researcher",
-    "data science",
-    "research scientist",
-    "mathematical modeler",
-    "AI engineer",
-    "algorithm engineer",
-    "quantitative researcher",
-    "technical consultant",
-    "bioinformatics analyst",
-    "cryptographer"
-]
+        "data scientist", "data analyst", "machine learning engineer", "quantitative analyst", "actuary",
+        "financial analyst", "investment analyst", "risk analyst", "accountant", "financial advisor",
+        "software engineer", "data engineer", "business intelligence analyst", "statistical analyst",
+        "operations research analyst", "economist", "machine learning researcher", "data science",
+        "research scientist", "mathematical modeler", "AI engineer", "algorithm engineer",
+        "quantitative researcher", "technical consultant", "bioinformatics analyst", "cryptographer"
+    ]
 
     locations = [
-    "New Hampshire", "Remote", "Durham, NH", "Warner, NH", "Hudson, NH", "Concord, NH", 
-    "Portsmouth, NH", "New London, NH", "Merrimack, NH", "Boston, MA", "Londonderry, NH", 
-    "Hampton, NH", "Nashua, NH", "Tilton, NH", "Rochester, NH", "Exeter, NH", "Belmont, NH", 
-    "Salem, NH", "Ossipee, NH", "Dover, NH", "Lee, NH", "Henniker, NH", "Hopkinton, NH", 
-    "Hillsborough, NH", "Weare, NH", "Franklin, NH", "Northfield, NH", "Newport, NH", 
-    "Pembroke, NH", "Goffstown, NH", "Hooksett, NH", "New Boston, NH", "Laconia, NH", 
-    "Gilford, NH", "Salisbury, NH", "Contoocook, NH", "Sunapee, NH", "Andover, NH", 
-    "Bradford, NH", "Sutton, NH"
-]
+        "New Hampshire", "Remote", "Durham, NH", "Warner, NH", "Hudson, NH", "Concord, NH", 
+        "Portsmouth, NH", "New London, NH", "Merrimack, NH", "Boston, MA", "Londonderry, NH", 
+        "Hampton, NH", "Nashua, NH", "Tilton, NH", "Rochester, NH", "Exeter, NH", "Belmont, NH", 
+        "Salem, NH", "Ossipee, NH", "Dover, NH", "Lee, NH", "Henniker, NH", "Hopkinton, NH", 
+        "Hillsborough, NH", "Weare, NH", "Franklin, NH", "Northfield, NH", "Newport, NH", 
+        "Pembroke, NH", "Goffstown, NH", "Hooksett, NH", "New Boston, NH", "Laconia, NH", 
+        "Gilford, NH", "Salisbury, NH", "Contoocook, NH", "Sunapee, NH", "Andover, NH", 
+        "Bradford, NH", "Sutton, NH"
+    ]
 
     all_jobs = []
     for title in job_titles:
