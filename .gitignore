@@ -1,0 +1,10 @@
+# Ignore logs and sensitive files
+__pycache__/
+*.pyc
+*.log
+*.xlsx
+*.csv
+token.pickle
+credentials.json
+*.txt
+*.pdf
