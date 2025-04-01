@@ -6,10 +6,14 @@ from datetime import datetime
 import smtplib
 from email.message import EmailMessage
 import re
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Settings
-EMAIL_ADDRESS = "shannonebreault@gmail.com"
-EMAIL_PASSWORD = "tocz jbkj retu ektc"
+EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 RESUME_DIR = "."
 CSV_FILE = "serpapi_jobs.csv"
 COVER_LETTER_TEMPLATE = "base_cover_letter.txt"

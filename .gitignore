@@ -1,10 +1,12 @@
 # Ignore logs and sensitive files
-__pycache__/
-*.pyc
-*.log
+.env
 *.xlsx
 *.csv
+*.log
 token.pickle
 credentials.json
-*.txt
 *.pdf
+*.txt
+__pycache__/
+*.pyc
+
